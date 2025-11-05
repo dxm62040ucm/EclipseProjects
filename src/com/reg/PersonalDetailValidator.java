@@ -64,6 +64,18 @@ public class PersonalDetailValidator {
 			System.out.println(accessorSerialId + " is not Matched with given pattern: " );
 		}
 		
+		
+		String reg="[\\w]+[\\w]+[\\w]+";
+		Pattern pattern5 = Pattern.compile(reg);
+		String[] input={"Car Jones","I_Am_D","555 555 555","Mark_Walls Wade"," c a b"};
+		for(String s:input) {
+		Matcher matcher5 = pattern5.matcher(s);
+		if (matcher5.matches()) {
+			System.out.println(input + " is Matched with given pattern: ");
+		} else {
+			System.out.println(input+ " is not Matched with given pattern: " );
+		}
+		}
 	}
 
 }
